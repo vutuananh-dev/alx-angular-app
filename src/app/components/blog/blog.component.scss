@@ -1,0 +1,25 @@
+.blog-app {
+  ::ng-deep .carousel-container {
+    border-radius: 1.5rem;
+
+    .carousel-content {
+      height: 100%;
+
+      img {
+        object-fit: cover;
+      }
+
+      .carousel-text-wrapper {
+        position: absolute;
+        z-index: 99;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+    }
+  }
+}

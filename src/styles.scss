@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'NVN Motherland Signature', serif;
+  font-size: 13px;
+  padding: 1.25rem;
+}
+
+
+.alx-divider {
+  background-image: url('../src/assets/images/divider.svg');
+  height: 16px;
+}

@@ -1,0 +1,32 @@
+<div class="blog-app">
+  <h1
+    class="text-sm text-center leading-7 font-normal text-primary sm:text-2xl md:leading-relaxed md:text-4xl mb-2 sm:mb-4 md:gap-10 md:mb-8">
+    Lắng Nghe Sự Sống Bên Trong Bạn
+  </h1>
+  <div class="container mx-auto flex flex-col gap-8">
+    <carousel [loop]="true" [autoplay]="true" [dots]="true" class="md:h-513" [cellWidth]="'100%'">
+      <div *ngFor="let item of carouselData" class="carousel-cell rounded-3xl">
+        <div class="carousel-content">
+          <div class="carousel-text-wrapper">
+            <div [routerLink]="['/article', item.slug]"
+              class="carousel-text cursor-pointer text-sm sm:text-2xl md:text-5xl hover:text-primary  text-white">
+              {{item.text}}
+            </div>
+          </div>
+          <img [src]="item.imageSrc">
+        </div>
+      </div>
+    </carousel>
+    <div
+      class="grid grid-cols-1 gap-6 font-helvetica-neue grid-cols-1 sm:grid-cols-2  md:grid-cols-3 mt-2 sm:4 md:mt-8">
+      <app-card *ngFor="let card of cardData" [model]="card">
+      </app-card>
+    </div>
+    <div class="text-center">
+      <button type="button"
+        class="text-white text-md uppercase font-medium font-helvetica-neue bg-primary hover:bg-primary-light focus:ring-4 focus:ring-secondary-light rounded-2xl focus:outline-none px-11 py-4">
+        Xem Thêm
+      </button>
+    </div>
+  </div>
+</div>
